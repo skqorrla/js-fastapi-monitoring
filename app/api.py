@@ -14,7 +14,7 @@ model = load(ROOT_DIR / "artifacts/model.joblib")
 instrumentator.instrument(app).expose(app, include_in_schema=False, should_gzip=True)
 
 @app.get("/")
-def root():
+def root():   
     return "Wine Quality Ratings"
 
 # response_model : target
